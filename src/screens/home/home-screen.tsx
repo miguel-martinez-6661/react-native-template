@@ -4,9 +4,15 @@ import { Button, Text } from "../../components/shared";
 import { Screen } from "../../components/shared";
 import { Routes } from "../../navigation/routes";
 import { AppNavigationProps } from "../../types/navigation";
+import { useAppDispatch, useAppSelector } from "../../hooks/use-store";
+import { decrement, increment } from "../../store/slices/counter-slice";
+import { ButtonContainer } from "./home-screen.styled";
 
 export const HomeScreen = () => {
+  const dispatch = useAppDispatch();
   const { navigate } = useNavigation<AppNavigationProps>();
+
+  const { value } = useAppSelector((state) => state.counter);
 
   const handleNavigation = useCallback(() => {
     navigate(Routes.Details);
@@ -14,8 +20,26 @@ export const HomeScreen = () => {
 
   return (
     <Screen>
-      <Text>Hello Home</Text>
-      <Button onPress={handleNavigation}>Hello</Button>
+      <Text>{`Hello Home => ${value}`}</Text>
+      <ButtonContainer>
+        <Button onPress={handleNavigation}>Navigate</Button>
+
+        <Button
+          onPress={() => {
+            dispatch(decrement());
+          }}
+        >
+          Decrease
+        </Button>
+
+        <Button
+          onPress={() => {
+            dispatch(increment());
+          }}
+        >
+          Increase
+        </Button>
+      </ButtonContainer>
     </Screen>
   );
 };

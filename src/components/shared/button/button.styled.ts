@@ -6,7 +6,8 @@ export const PrimaryButtonLabel = styled.Text`
 `;
 
 export const PrimaryButton = styled.TouchableOpacity`
-  width: 100%;
+  flex: 1;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding-left: 10px;
