@@ -4,6 +4,7 @@ import { ThemeProvider } from "./src/providers";
 import { AppNavigation } from "./src/navigation/app-navigation";
 import { store } from "./src/store";
 
+
 export default function App() {
   return (
     <Provider store={store}>

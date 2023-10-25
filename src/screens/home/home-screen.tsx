@@ -1,11 +1,12 @@
 import React, { useCallback } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { Button, Text } from "../../components/shared";
-import { Screen } from "../../components/shared";
-import { Routes } from "../../navigation/routes";
-import { AppNavigationProps } from "../../types/navigation";
-import { useAppDispatch, useAppSelector } from "../../hooks/use-store";
-import { decrement, increment } from "../../store/slices/counter-slice";
+import { AppNavigationProps } from "@/interfaces/navigation";
+import { useAppDispatch, useAppSelector } from "@/hooks";
+import { decrement, increment } from "@/store";
+import { Routes } from "@/navigation/routes";
+
+import { Button, Text } from "@/components/shared";
+import { Screen } from "@/components/shared";
 import { ButtonContainer } from "./home-screen.styled";
 
 export const HomeScreen = () => {

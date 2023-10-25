@@ -1,5 +1,5 @@
 import React from "react";
-import { Screen, Text } from "../../components/shared";
+import { Screen, Text } from "@/components/shared";
 
 export const DetailsScreen = () => {
   return (
