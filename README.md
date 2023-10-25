@@ -1,3 +1,5 @@
+![image](https://github.com/miguel-martinez-6661/react-native-template/assets/79332087/e23c5ce5-45b3-4b4b-8ac2-02ba69cf6e3a)
+
 # react-native-template
 This is a simple React Native (expo) project that already includes the minimal base tools to start a mobile project. 
 This template is specially for those FullStack/Web Developers who needs to build a mobile-app in the closest way to web development.
