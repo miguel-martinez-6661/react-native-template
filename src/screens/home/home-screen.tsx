@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { AppNavigationProps } from "@/interfaces/navigation";
+import { AppNavigationProps } from "@/interfaces/navigation/navigation";
 import { useAppDispatch, useAppSelector } from "@/hooks";
 import { decrement, increment } from "@/store";
 import { Routes } from "@/navigation/routes";
