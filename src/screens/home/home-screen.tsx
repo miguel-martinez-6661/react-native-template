@@ -5,13 +5,17 @@ import { Routes } from "@/navigation/routes";
 import { Button, Text } from "@/components/shared";
 import { Screen } from "@/components/shared";
 import { ButtonContainer } from "./home-screen.styled";
+import { useStore } from "@/store";
 
 export const HomeScreen = () => {
+  const { bears, increasePopulation } = useStore((state) => state);
   const { navigate } = useNavigation<AppNavigationProps>();
 
   const handleNavigation = useCallback(() => {
     navigate(Routes.Details);
   }, []);
+
+  console.log(bears);
 
   return (
     <Screen>
@@ -19,7 +23,13 @@ export const HomeScreen = () => {
       <ButtonContainer>
         <Button onPress={handleNavigation}>Navigate</Button>
 
-        <Button onPress={() => {}}>Decrease</Button>
+        <Button
+          onPress={() => {
+            increasePopulation();
+          }}
+        >
+          Decrease
+        </Button>
 
         <Button onPress={() => {}}>Increase</Button>
       </ButtonContainer>
