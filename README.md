@@ -9,7 +9,7 @@ This template is specially for those FullStack/Web Developers who needs to build
 - [x] Redux Toolkit (+Thunk)
 - [x] Styled Components
 - [x] React Navigation
-- [x] Babel Path Beautify
+- [x] Unit Testing Env - RNTL
 
 ## Run
 ```
@@ -37,4 +37,11 @@ Then run:
 yarn web
 ```
 
-Note: You will need an Expo env to use this template.
+### Unit Testing
+This template is prepared to run tests with React Native Testing Library.
+To start running tests, just run:
+```
+yarn test
+```
+
+Note:  You will need an Expo env to use this template.
