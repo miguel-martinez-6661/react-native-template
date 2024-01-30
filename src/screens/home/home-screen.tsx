@@ -1,19 +1,25 @@
 import React, { useCallback } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { AppNavigationProps } from "@/interfaces/navigation/navigation";
-// import { useAppDispatch, useAppSelector } from "@/hooks";
-// import { decrement, increment } from "@/store";
 import { Routes } from "@/navigation/routes";
-
-import { Button, Text } from "@/components/shared";
 import { Screen } from "@/components/shared";
+import { Button, Text } from "@/components/shared";
+import { AppNavigationProps } from "@/interfaces/navigation/navigation";
 import { ButtonContainer } from "./home-screen.styled";
+import { useBearStore, useLionStore } from "@/store";
 
 export const HomeScreen = () => {
-  // const dispatch = useAppDispatch();
   const { navigate } = useNavigation<AppNavigationProps>();
+  const {
+    bears: numberOfBears,
+    addBear,
+    subBear,
+  } = useBearStore((state) => state);
 
-  // const { value } = useAppSelector((state) => state.counter);
+  const {
+    lions: numberOfLions,
+    addLion,
+    subLion,
+  } = useLionStore((state) => state);
 
   const handleNavigation = useCallback(() => {
     navigate(Routes.Details);
@@ -21,25 +27,20 @@ export const HomeScreen = () => {
 
   return (
     <Screen>
-      <Text>{`Hello Home`}</Text>
+      <Text>{`You have ${numberOfBears} bears`}</Text>
+      <Text>{`and`}</Text>
+      <Text>{`You have ${numberOfLions} Lions`}</Text>
+      <ButtonContainer>
+        <Button onPress={subBear}>Remove Bear</Button>
+        <Button onPress={addBear}>Add Bear</Button>
+      </ButtonContainer>
+      <ButtonContainer>
+        <Button onPress={subLion}>Remove Lion</Button>
+        <Button onPress={addLion}>Add Lion</Button>
+      </ButtonContainer>
+
       <ButtonContainer>
         <Button onPress={handleNavigation}>Navigate</Button>
-
-        <Button
-          onPress={() => {
-            // dispatch(decrement());
-          }}
-        >
-          Decrease
-        </Button>
-
-        <Button
-          onPress={() => {
-            // dispatch(increment());
-          }}
-        >
-          Increase
-        </Button>
       </ButtonContainer>
     </Screen>
   );

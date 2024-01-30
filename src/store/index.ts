@@ -1,3 +1,2 @@
-export * from "./store";
-
-export * from "./slices/counter-slice";
+export * from "./bear.store";
+export * from "./lion.store";
