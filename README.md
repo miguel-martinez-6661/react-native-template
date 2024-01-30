@@ -1,13 +1,13 @@
-<div style="display: flex; flex-direction: row; border-radius: 20px; overflow: hidden">
+<div style="display: flex; flex-direction: row; border-radius: 20px; overflow: hidden; gap: 15px;">
       <image
-        style="width: 50%"
+        style="width: 300px; height: 150px; border-radius: 20px;"
         src="https://negativeepsilon.com/media/attachments/blobs/2023/01/09/PtvoAHNzviYEkFX7qBZo6q_expo_nY7AdiR.png_riwC4kc5pLH7k1e5ReNajv_2FOQ.webp"
       />
       <image
-        style="width: 50%"
+        style="width: 300px; height: 150px; border-radius: 20px;"
         src="https://github.com/miguel-martinez-6661/react-native-template/assets/79332087/e23c5ce5-45b3-4b4b-8ac2-02ba69cf6e3a"
       />
-</div>
+    </div>
 
 # react-native-template
 
