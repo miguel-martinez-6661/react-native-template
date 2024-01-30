@@ -7,12 +7,12 @@ import { store } from "./src/store";
 
 export default function App() {
   return (
-    <Provider store={store}>
+    // <Provider store={store}>
       <NavigationContainer>
         <ThemeProvider>
           <AppNavigation />
         </ThemeProvider>
       </NavigationContainer>
-    </Provider>
+    // </Provider>
   );
 }
