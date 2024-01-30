@@ -21,6 +21,7 @@ This template is specially for those FullStack/Web Developers who needs to build
 - [x] 💅🏻 Styled Components
 - [x] 🛣️ React Navigation
 - [x] 🧪 Unit Testing Env - RNTL
+- [x] 🐶 Husky pre-commit
 
 ## Run
 
