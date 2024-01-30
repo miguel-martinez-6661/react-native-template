@@ -1,2 +1,2 @@
-export * from "./bear.store";
-export * from "./lion.store";
+export * from './bear.store'
+export * from './lion.store'
