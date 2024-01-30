@@ -1,8 +1,8 @@
 import React, { useCallback } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { AppNavigationProps } from "@/interfaces/navigation/navigation";
-import { useAppDispatch, useAppSelector } from "@/hooks";
-import { decrement, increment } from "@/store";
+// import { useAppDispatch, useAppSelector } from "@/hooks";
+// import { decrement, increment } from "@/store";
 import { Routes } from "@/navigation/routes";
 
 import { Button, Text } from "@/components/shared";
@@ -10,10 +10,10 @@ import { Screen } from "@/components/shared";
 import { ButtonContainer } from "./home-screen.styled";
 
 export const HomeScreen = () => {
-  const dispatch = useAppDispatch();
+  // const dispatch = useAppDispatch();
   const { navigate } = useNavigation<AppNavigationProps>();
 
-  const { value } = useAppSelector((state) => state.counter);
+  // const { value } = useAppSelector((state) => state.counter);
 
   const handleNavigation = useCallback(() => {
     navigate(Routes.Details);
@@ -21,13 +21,13 @@ export const HomeScreen = () => {
 
   return (
     <Screen>
-      <Text>{`Hello Home => ${value}`}</Text>
+      <Text>{`Hello Home`}</Text>
       <ButtonContainer>
         <Button onPress={handleNavigation}>Navigate</Button>
 
         <Button
           onPress={() => {
-            dispatch(decrement());
+            // dispatch(decrement());
           }}
         >
           Decrease
@@ -35,7 +35,7 @@ export const HomeScreen = () => {
 
         <Button
           onPress={() => {
-            dispatch(increment());
+            // dispatch(increment());
           }}
         >
           Increase
