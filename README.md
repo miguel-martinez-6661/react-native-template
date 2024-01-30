@@ -17,7 +17,7 @@ This template is specially for those FullStack/Web Developers who needs to build
 ## Features
 
 - [x] ⌨️ Typescript
-- [x] 🏬 Redux Toolkit (+Thunk)
+- [x] 🐻 Zustand
 - [x] 💅🏻 Styled Components
 - [x] 🛣️ React Navigation
 - [x] 🧪 Unit Testing Env - RNTL
