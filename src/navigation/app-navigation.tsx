@@ -1,11 +1,10 @@
-import React from "react";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { HomeScreen } from "@/screens/home/home-screen";
-import { DetailsScreen } from "@/screens/details/details-screen";
-import { AppParamList } from "@/interfaces/navigation/navigation";
-import { Routes } from "./routes";
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { HomeScreen } from '@/screens/home/home-screen'
+import { DetailsScreen } from '@/screens/details/details-screen'
+import { type AppParamList } from '@/interfaces/navigation/navigation'
+import { Routes } from './routes'
 
-const Stack = createNativeStackNavigator<AppParamList>();
+const Stack = createNativeStackNavigator<AppParamList>()
 
 export const AppNavigation = () => {
   return (
@@ -13,5 +12,5 @@ export const AppNavigation = () => {
       <Stack.Screen name={Routes.Home} component={HomeScreen} />
       <Stack.Screen name={Routes.Details} component={DetailsScreen} />
     </Stack.Navigator>
-  );
-};
+  )
+}
