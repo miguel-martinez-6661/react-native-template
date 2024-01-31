@@ -1,12 +1,12 @@
-import { useContext } from "react";
-import { ThemeContext } from "@/providers/index";
-import { COLOR_SCHEME, FONT_SIZES } from "@/constants";
+import { useContext } from 'react'
+import { ThemeContext } from '@/providers/index'
+import { COLOR_SCHEME, FONT_SIZES } from '@/constants'
 
 export const useTheme = () => {
-  const { isDark } = useContext(ThemeContext);
+  const { isDark } = useContext(ThemeContext)
 
   return {
-    colors: COLOR_SCHEME[isDark ? "dark" : "light"],
-    fontSizes: FONT_SIZES,
-  };
-};
+    colors: COLOR_SCHEME[isDark ? 'dark' : 'light'],
+    fontSizes: FONT_SIZES
+  }
+}

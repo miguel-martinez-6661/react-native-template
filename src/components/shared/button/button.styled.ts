@@ -1,9 +1,9 @@
-import styled from "styled-components/native";
+import styled from 'styled-components/native'
 
 export const PrimaryButtonLabel = styled.Text`
   color: white;
   font-size: 16px;
-`;
+`
 
 export const PrimaryButton = styled.TouchableOpacity`
   flex: 1;
@@ -17,4 +17,4 @@ export const PrimaryButton = styled.TouchableOpacity`
   border-radius: 8px;
 
   background-color: blue;
-`;
+`

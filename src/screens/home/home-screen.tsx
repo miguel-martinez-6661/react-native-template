@@ -22,7 +22,7 @@ export const HomeScreen = () => {
 
   const handleNavigation = useCallback(() => {
     navigate(Routes.Details)
-  }, [])
+  }, [navigate])
 
   return (
     <Screen>
