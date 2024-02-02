@@ -1,8 +1,6 @@
 name: Lint TS (eslint, prettier)
 
 on:
-  push:
-    branches: [main, develop, feature/*, hotfix/*, release/*]
   pull_request:
     branches: [main, develop, feature/*, hotfix/*, release/*]
 
@@ -27,4 +25,4 @@ jobs:
 
       - name: 🏃‍♂️ Run ESLint PR
         if: github.event_name != 'pull_request'
-        run: pnpm run lint
+        run: yarn lint
