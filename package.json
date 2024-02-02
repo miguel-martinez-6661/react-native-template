@@ -13,7 +13,8 @@
     "prepare": "husky install",
     "test-watch": "jest --watch --coverage=false --changedSince=origin/main",
     "testDebug": "jest -o --watch --coverage=false",
-    "test": "jest",
+    "test": "jest --coverage=false",
+    "test:ci": "jest --coverage",
     "np": "np --no-publish",
     "postversion": "react-native-version"
   },

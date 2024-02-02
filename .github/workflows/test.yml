@@ -1,0 +1,37 @@
+name: Tests
+
+on:
+  push:
+    branches: [main, master, develop]
+    
+  pull_request:
+    branches: [main, master, develop]
+
+jobs:
+  test:
+    name: Tests (jest)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📦 Checkout project repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: 🏃‍♂️ Run Tests 🧪
+        run: yarn install && yarn test
+
+        # Include test coverage comment in PR
+      - name: Jest Coverage Comment
+        uses: MishaKav/jest-coverage-comment@main
+        if: (success() || failure()) && github.event_name == 'pull_request'
+        with:
+          coverage-summary-path: ./coverage/coverage-summary.json
+          summary-title: '💯 Test Coverage'
+          badge-title: Coverage
+          create-new-comment: false
+          junitxml-title: 😎 Tests Results
+          junitxml-path: ./coverage/jest-junit.xml
+          coverage-title: 👀 Tests Details
+          coverage-path: ./coverage/coverage.txt
+          report-only-changed-files: true
