@@ -1,6 +1,6 @@
 {
   "name": "react-native-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -13,7 +13,10 @@
     "prepare": "husky install",
     "test-watch": "jest --watch --coverage=false --changedSince=origin/main",
     "testDebug": "jest -o --watch --coverage=false",
-    "test": "jest"
+    "test": "jest --coverage=false",
+    "test:ci": "jest --coverage",
+    "np": "np --no-publish",
+    "postversion": "react-native-version"
   },
   "dependencies": {
     "@react-navigation/native": "^6.1.9",
@@ -48,7 +51,9 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.0",
     "lint-staged": "^15.2.0",
+    "np": "^9.2.0",
     "prettier": "^3.2.4",
+    "react-native-version": "^4.0.0",
     "tsc-files": "^1.1.4",
     "typescript": "*"
   },
@@ -69,5 +74,9 @@
       "!**/babel.config.js",
       "!**/jest.setup.ts"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguel-martinez-6661/react-native-template"
   }
 }
