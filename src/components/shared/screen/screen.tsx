@@ -1,9 +1,9 @@
-import { ScreenContainer } from "./screen.styled";
+import { ScreenContainer } from './screen.styled'
 
 interface ScreenProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export const Screen = ({ children }: ScreenProps) => {
-  return <ScreenContainer>{children}</ScreenContainer>;
-};
+  return <ScreenContainer>{children}</ScreenContainer>
+}
