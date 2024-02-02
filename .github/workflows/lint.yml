@@ -2,9 +2,9 @@ name: Lint TS (eslint, prettier)
 
 on:
   push:
-    branches: [main, master]
+    branches: [main, develop, feature/*, hotfix/*, release/*]
   pull_request:
-    branches: [main, master]
+    branches: [main, develop, feature/*, hotfix/*, release/*]
 
 jobs:
   lint:
