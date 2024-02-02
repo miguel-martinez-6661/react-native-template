@@ -11,8 +11,8 @@
 
 # react-native-template
 
-This is a simple React Native (expo) project that already includes the minimal base tools to start a mobile project.
-This template is specially for those FullStack/Web Developers who needs to build a mobile-app in the closest way to web development.
+This is a base React Native (expo) project that already includes the minimal base tools to start a mobile project.
+This template is specially for those FullStack/Web Developers who needs to build a mobile-app natively in the closest way to web development.
 
 ## Features
 
